@@ -27,7 +27,8 @@ public class MainActivity extends Activity {
             
             if (!pkg.equals(getPackageName())) {
                 try {
-                    dpm.setApplicationHidden(admin, pkg, !visible);
+                    //dpm.setApplicationHidden(admin, pkg, !visible);
+					dpm.setPackagesSuspended(admin, new String[]{pkg}, !visible);
                 } catch (Exception e) {
                     
                 }
