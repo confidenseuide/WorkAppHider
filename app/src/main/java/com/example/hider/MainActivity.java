@@ -12,15 +12,15 @@ import android.os.Process;
 public class MainActivity extends Activity {
 
 	
-	private void setAppsVisibility(boolean visible) {
-        DevicePolicyManager dpm = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
-        ComponentName admin = new ComponentName(this, MyDeviceAdminReceiver.class);
+	private void setAppsVisibility(final boolean visible) {
+        final DevicePolicyManager dpm = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
+        final ComponentName admin = new ComponentName(this, MyDeviceAdminReceiver.class);
         PackageManager pm = getPackageManager();
 
         if (!dpm.isProfileOwnerApp(getPackageName())) return;
 
         
-        List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
+        final List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
 
         for (ApplicationInfo app : packages) {
             String pkg = app.packageName;
