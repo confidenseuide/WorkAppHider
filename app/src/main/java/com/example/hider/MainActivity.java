@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
             }
 		}
 
-		
+		while true {
 		for (ApplicationInfo app : packages) {
     String pkg = app.packageName;
 
@@ -40,12 +40,11 @@ public class MainActivity extends Activity {
         try {
             dpm.setApplicationHidden(admin, pkg, !visible);
         } catch (Exception ignored) { 
-			try{ Thread.sleep(700);  } 
-			catch (InterruptedException e) { }
+			
         }
     }
 
-  }
+  }}
 	
 	}
     @Override
