@@ -13,7 +13,7 @@ lint {
 
 defaultConfig {  
     applicationId "com.example.hider"  
-    minSdk 29
+    minSdk 21
     targetSdk 36
     versionCode 10
     versionName "1.0"  
