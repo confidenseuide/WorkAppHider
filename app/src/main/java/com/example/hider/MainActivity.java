@@ -32,9 +32,7 @@ public class MainActivity extends Activity {
             }
 		}
 
-		new Thread(new Runnable() {
-				@Override
-				public void run() {
+		
 		for (ApplicationInfo app : packages) {
     String pkg = app.packageName;
 
@@ -48,9 +46,6 @@ public class MainActivity extends Activity {
     }
 
   }
-}
-}).start();
-
 	
 	}
     @Override
